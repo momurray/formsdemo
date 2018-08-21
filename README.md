@@ -1,5 +1,7 @@
 # Formsdemo
 
+This demo creates reactive forms from a JSON array form definition. This allows for the dynamic form creation in a consistent and easy fashion. The layout and the validation of the fields is all catered for automatically. The demo is implemented as a single TS file with three different form examples (with varying field types). The core is based on the "formly" package. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
 ## Development server
