@@ -1,3 +1,7 @@
 .ipad {
     max-width: 600px;
 }
+
+.menu-view {
+    min-width: 300px;
+}

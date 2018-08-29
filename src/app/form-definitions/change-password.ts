@@ -26,7 +26,7 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
           }
       },
       {
-          key: 'newPassword',
+          key: 'oldPassword',
           type: 'input',
           templateOptions: {
               label: 'Old Password',
