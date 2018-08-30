@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { changePasswordModelDefinition, changePasswordFieldsDefinition } from './form-definitions/change-password';
 import { changeNomineeModelDefinition, changeNomineeFieldsDefinition } from './form-definitions/change-nominee';
 import { redemptionModelDefinition, redemptionFieldsDefinition } from './form-definitions/redemption';
+import { NgxPermissionsService } from 'ngx-permissions';
 
 @Component({
     selector: 'app-root',
@@ -26,11 +27,17 @@ export class AppComponent implements OnInit {
     redemptionModel = redemptionModelDefinition;
     redemptionFields = redemptionFieldsDefinition;
 
+    constructor( private permissionsService:NgxPermissionsService){}
+
     ngOnInit() {
         // Default the the "Change Password" form on startup.
         this.model = this.changePasswordModel;
         this.fields = this.changePasswordFields;
-    }
+
+        const perm = ["ADMIN", "EDITOR"];
+ 
+        this.permissionsService.loadPermissions(perm);
+     }
 
     // This shows you what model data you get when the submit button is finally pressed. 
     submit(model) {

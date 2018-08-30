@@ -41,3 +41,15 @@
         </div>
     </div>
 </div>
+
+<div *ngxPermissionsOnly="['ADMIN', 'GUEST']">
+    <div>You can see this text congrats ADMIN / GUEST</div>
+</div>
+
+<ng-template ngxPermissionsOnly="JOHNNY">
+    <div>You wont see this as you don't have permission </div>
+</ng-template>
+
+<ng-template [ngxPermissionsExcept]="['FRED']">
+    <div> All will see it except JOHNY</div>
+</ng-template>

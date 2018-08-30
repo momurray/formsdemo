@@ -11,6 +11,8 @@ import { MenutestComponent } from './menutest/menutest.component';
 
 import {PanelMenuModule} from 'primeng/panelmenu';
 import {MenubarModule} from 'primeng/menubar';
+import { NgxPermissionsModule } from 'ngx-permissions';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {MenubarModule} from 'primeng/menubar';
     FormlyModule.forRoot(),
     FormlyBootstrapModule,
     PanelMenuModule,
-    MenubarModule
+    MenubarModule,
+    NgxPermissionsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
